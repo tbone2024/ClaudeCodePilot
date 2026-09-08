@@ -6,29 +6,30 @@
     <title>UOB IT PMO Board</title>
     <style>
       :root {
-        --blue-900: #0e2f5a;
-        --blue-800: #143d73;
-        --blue-700: #1f4f8c;
-        --blue-600: #2a60a8;
-        --blue-500: #3f7bc3;
-        --blue-100: #e9f1fb;
-        --blue-50: #f4f8fd;
-        --ink-900: #1b2430;
-        --ink-700: #374151;
-        --ink-500: #5f6b7a;
+        --pink-950: #4a102d;
+        --pink-900: #68143e;
+        --pink-800: #8f1d55;
+        --pink-700: #b52b6b;
+        --pink-600: #d94d8a;
+        --pink-200: #f6c5da;
+        --pink-100: #fce5ef;
+        --pink-50: #fff5f9;
+        --ink-900: #2d1723;
+        --ink-700: #5c3c4b;
+        --ink-500: #876d79;
         --surface: #ffffff;
-        --surface-muted: #f4f7fb;
-        --line: #d8e0ee;
-        --shadow: 0 12px 24px rgba(18, 38, 63, 0.10);
-        --success: #0a7a5a;
-        --warning: #d18a00;
-        --danger: #c23d3d;
-        --critical: #d73030;
-        --high: #dc9a16;
-        --medium: #2d73c8;
-        --low: #77839a;
-        --bg: #edf3fa;
-        --radius: 14px;
+        --surface-muted: #fff0f6;
+        --line: #edd2df;
+        --shadow: 0 14px 30px rgba(97, 27, 61, 0.10);
+        --success: #15735b;
+        --warning: #9a5b0c;
+        --danger: #b4234d;
+        --critical: #b4234d;
+        --high: #ad6413;
+        --medium: #7561a8;
+        --low: #776b75;
+        --bg: #fff7fa;
+        --radius: 12px;
         --space-1: 4px;
         --space-2: 8px;
         --space-3: 12px;
@@ -62,7 +63,7 @@
       input:focus-visible,
       select:focus-visible,
       textarea:focus-visible {
-        outline: 3px solid rgba(47, 114, 195, 0.38);
+        outline: 3px solid rgba(181, 43, 107, 0.42);
         outline-offset: 2px;
       }
 
@@ -73,7 +74,7 @@
       }
 
       .header-bar {
-        background: linear-gradient(180deg, var(--blue-900) 0%, var(--blue-800) 100%);
+        background: var(--pink-950);
         color: #fff;
         border-radius: var(--radius);
         box-shadow: var(--shadow);
@@ -100,7 +101,7 @@
         border-radius: 10px;
         display: grid;
         place-items: center;
-        background: rgba(255, 255, 255, 0.12);
+        background: var(--pink-800);
         border: 1px solid rgba(255, 255, 255, 0.22);
         font-weight: 700;
         font-size: 1.1rem;
@@ -108,7 +109,7 @@
 
       .brand-text {
         font-size: clamp(1.3rem, 1.8vw, 2rem);
-        letter-spacing: 0.04em;
+        letter-spacing: 0.02em;
         font-weight: 700;
       }
 
@@ -149,7 +150,7 @@
 
       .primary-btn {
         background: #fff;
-        color: var(--blue-800);
+        color: var(--pink-900);
         font-weight: 700;
         padding: 0.72rem 1.1rem;
       }
@@ -192,7 +193,7 @@
         background: var(--surface);
         border: 1px solid var(--line);
         border-radius: 14px;
-        box-shadow: 0 8px 18px rgba(16, 31, 48, 0.03);
+        box-shadow: var(--shadow);
         margin-top: var(--space-5);
         padding: var(--space-4) var(--space-5);
       }
@@ -253,13 +254,13 @@
         border: 1px solid var(--line);
         border-radius: var(--radius);
         min-height: 280px;
-        box-shadow: 0 9px 18px rgba(21, 37, 63, 0.04);
+        box-shadow: 0 8px 18px rgba(97, 27, 61, 0.06);
         transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
       }
 
       .column.drag-over {
-        border-color: var(--blue-500);
-        box-shadow: 0 0 0 3px rgba(63, 123, 195, 0.12);
+        border-color: var(--pink-600);
+        box-shadow: 0 0 0 3px rgba(217, 77, 138, 0.16);
       }
 
       .column-header {
@@ -286,8 +287,8 @@
         justify-content: center;
         padding: 0 var(--space-2);
         border-radius: 999px;
-        background: var(--blue-100);
-        color: var(--blue-800);
+        background: var(--pink-100);
+        color: var(--pink-900);
         font-size: 0.8rem;
         font-weight: 700;
       }
@@ -307,7 +308,7 @@
         border-left: 5px solid var(--low);
         border-radius: 12px;
         padding: var(--space-3);
-        box-shadow: 0 8px 14px rgba(30, 42, 56, 0.04);
+        box-shadow: 0 6px 14px rgba(97, 27, 61, 0.06);
         cursor: grab;
       }
 
@@ -434,8 +435,8 @@
       }
 
       .category-tag {
-        background: var(--blue-50);
-        color: var(--blue-800);
+        background: var(--pink-50);
+        color: var(--pink-900);
       }
 
       .overdue-badge {
@@ -614,9 +615,9 @@
       }
 
       .submit-button {
-        background: var(--blue-700);
+        background: var(--pink-800);
         color: #fff;
-        border: 1px solid var(--blue-700);
+        border: 1px solid var(--pink-800);
         padding: 0.8rem 1.2rem;
         border-radius: 10px;
         font-weight: 700;
@@ -624,9 +625,87 @@
       }
 
       .submit-button:disabled {
-        background: var(--blue-500);
+        background: var(--pink-600);
         opacity: 0.7;
         cursor: wait;
+      }
+
+      .workspace-kicker {
+        margin: var(--space-5) 0 var(--space-1);
+        color: var(--pink-200);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .workspace-title {
+        margin: 0;
+        font-size: clamp(1.45rem, 2.6vw, 2.35rem);
+        line-height: 1.1;
+      }
+
+      .workspace-description {
+        max-width: 620px;
+        margin: var(--space-2) 0 0;
+        color: #f8dce9;
+        line-height: 1.5;
+      }
+
+      .security-note {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+        color: #f9dce9;
+        font-size: 0.76rem;
+      }
+
+      .security-note::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #69d2ae;
+        box-shadow: 0 0 0 3px rgba(105, 210, 174, 0.15);
+      }
+
+      .toolbar-heading {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: var(--space-3);
+        margin-bottom: var(--space-4);
+      }
+
+      .toolbar-heading h2 {
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      .toolbar-heading p {
+        margin: 0;
+        color: var(--ink-500);
+        font-size: 0.78rem;
+      }
+
+      .task-card:hover {
+        border-color: var(--pink-200);
+        transform: translateY(-2px);
+        transition: border-color 0.18s ease, transform 0.18s ease;
+      }
+
+      .task-card:focus-within {
+        border-color: var(--pink-600);
+        box-shadow: 0 0 0 3px rgba(217, 77, 138, 0.14);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+        }
       }
 
       @media (max-width: 768px) {
@@ -655,14 +734,21 @@
             <div class="brand-text">UOB IT PMO</div>
           </div>
           <div class="header-actions">
-            <div class="demo-note">Demo mode: seeded data resets on refresh.</div>
+            <div class="security-note">Client-side demo · input escaped · no persistence</div>
             <button class="primary-btn" type="button" id="openTaskModal">+ Add Task</button>
           </div>
         </div>
+        <div class="workspace-kicker">Delivery control center</div>
+        <h1 class="workspace-title">Keep complex work moving.</h1>
+        <p class="workspace-description">A focused view of delivery risk, ownership, and next actions across the IT portfolio.</p>
         <div class="summary-strip" id="summaryStrip" aria-live="polite"></div>
       </header>
 
       <section class="toolbar" aria-label="Board filters">
+        <div class="toolbar-heading">
+          <h2>Filter the portfolio</h2>
+          <p>Results update as you type</p>
+        </div>
         <div class="toolbar-grid">
           <div class="field">
             <label for="filterProject">Project</label>
@@ -1127,28 +1213,42 @@
       }
 
       async function notifyNewTask(task) {
-        const response = await fetch(FORMSUBMIT_ENDPOINT, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json"
-          },
-          body: JSON.stringify({
-            _subject: `[UOB IT PMO] New task ${task.id}: ${task.title}`,
-            _template: "table",
-            _captcha: "false",
-            "Task ID": task.id,
-            Title: task.title,
-            Description: task.description,
-            Project: task.project,
-            Category: task.category,
-            Assignee: task.assignee,
-            Priority: task.priority,
-            "Due Date": task.dueDate,
-            Status: task.status,
-            "Submitted At": new Date().toISOString()
-          })
-        });
+        if (!FORMSUBMIT_ENDPOINT.startsWith("https://formsubmit.co/ajax/") || FORMSUBMIT_ENDPOINT.includes("YOUR_EMAIL")) {
+          throw new Error("FormSubmit endpoint is not configured");
+        }
+
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 8000);
+
+        let response;
+        try {
+          response = await fetch(FORMSUBMIT_ENDPOINT, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json"
+            },
+            credentials: "omit",
+            signal: controller.signal,
+            body: JSON.stringify({
+              _subject: `[UOB IT PMO] New task ${task.id}: ${task.title}`,
+              _template: "table",
+              _captcha: "false",
+              "Task ID": task.id,
+              Title: task.title,
+              Description: task.description,
+              Project: task.project,
+              Category: task.category,
+              Assignee: task.assignee,
+              Priority: task.priority,
+              "Due Date": task.dueDate,
+              Status: task.status,
+              "Submitted At": new Date().toISOString()
+            })
+          });
+        } finally {
+          clearTimeout(timeoutId);
+        }
 
         if (!response.ok) {
           throw new Error(`FormSubmit failed: ${response.status}`);
